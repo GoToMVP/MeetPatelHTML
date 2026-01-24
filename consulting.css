@@ -170,9 +170,9 @@ header .header-main .btn-getstarted{
 }
 
 .hero .hero-content .hero-btns .btn-two{
-    color: white;
+    color:white;
     background-color: transparent;
-    border: 2px solid white;
+    background-color: #018880;
 }
 .hero .hero-content .hero-btns .btn-two:hover{
     background-color: white;
@@ -680,22 +680,27 @@ section{
     padding: 0 15px;
     color: #444d4d;
 }
-.pricing .pricing-toggle .change{
-    position: relative;
-    display: inline-block;
+
+.pricing .pricing-toggle .change-plan{
+        border-radius: 20px;
+    background-color:#e3f5f5;
     width: 60px;
-    height: 30px;
-    background-color: #e3f5f5;
-    border-radius: 50px;
+    
+    position: relative;
+    height: 31px;
+    align-items: center;
+    display: flex;
 }
-.pricing .pricing-toggle .change .switch{
-        height: 22px;
-    width: 22px;
-        position: absolute;
-        border-radius: 50%;
-    left: 4px;
-    bottom: 4px;
+.pricing .pricing-toggle .change-plan #change-it{
     background-color: white;
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    cursor: pointer;
+    transition: .3S ease-in-out;
 }
 .pricing .pricing-toggle .discount-badge{
         position: absolute;
@@ -707,6 +712,9 @@ section{
     border-radius: 20px;
     background-color: #018880;
     color: white;
+}
+.pricing .pricing-toggle .monthly-active{
+    color:#018880;
 }
 .pricing .pricing-item{
     position: relative;
@@ -736,10 +744,16 @@ section{
     font-family: "Raleway", sans-serif;
 }
 .pricing .pricing-item .pricing-header .price-monthly{
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: #018880;
     margin-bottom: 10px;
+    position: relative;
+}
+.pricing .pricing-item .pricing-header .price-monthly::before{
+    content: "₹";
+    position: absolute;
+    left: 55px;
 }
 .pricing .pricing-item .pricing-header .price-monthly span{
         font-size: 1rem;
@@ -959,6 +973,25 @@ width: 100%;
     background-color:#018880;
     color: white;
     cursor: pointer;
+    align-items: center;
+    margin-left: 200px;
+}
+.form-control{
+    font-weight: 700 !important;
+}
+.form-control::placeholder{
+    font-weight: 400 !important;
+}
+
+
+textarea .form-control{
+    font-weight: 700 !important;
+    color: #333;
+
+}
+
+textarea .form-control{
+    font-weight: 400 !important;
 }
 /*contact section ends*/
 
@@ -969,6 +1002,7 @@ width: 100%;
     position: relative;
     color: #444d4d;
     background-color: #f1f8f7;
+    padding-bottom: 40px;
 }
 .footer h4{
     font-size: 16px;
@@ -1095,9 +1129,18 @@ width: 100%;
         margin-right: 0;
         margin-left: 70px;
     }
-    
+
     .social-links{
         
         justify-content: center;
+    }
+    h2{
+        text-align: center;
+    }
+}
+@media (max-width:755px){
+    .footer .follow-us{
+        margin-left: 110px;
+        margin-top: 10px;
     }
 }
